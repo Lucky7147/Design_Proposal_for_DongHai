@@ -130,10 +130,35 @@
             <a href="#leadership" class="hover:text-champagne transition-colors duration-300">Kế Hoạch</a>
             <a href="#contact" class="hover:text-champagne transition-colors duration-300">Liên Hệ</a>
         </nav>
-        <div class="md:hidden text-2xl cursor-pointer">
+        <div id="mobile-menu-btn" class="md:hidden text-2xl cursor-pointer hover:text-bordeaux transition-colors">
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-offwhite z-[60] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+        <button id="close-menu-btn"
+            class="absolute top-6 right-8 mt-2 mr-2 text-4xl text-gray-800 hover:text-bordeaux transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <span class="text-champagne uppercase tracking-[0.3em] text-sm font-semibold block mb-8">Menu</span>
+        <nav class="flex flex-col space-y-8 text-center text-xl font-serif tracking-widest uppercase text-gray-800">
+            <a href="#vision"
+                class="mobile-link hover:text-bordeaux transition-colors duration-300 block transform hover:scale-105">Tầm
+                Nhìn</a>
+            <a href="#showcase"
+                class="mobile-link hover:text-bordeaux transition-colors duration-300 block transform hover:scale-105">Showcase</a>
+            <a href="#lookbook"
+                class="mobile-link hover:text-bordeaux transition-colors duration-300 block transform hover:scale-105">Lookbook</a>
+            <a href="#leadership"
+                class="mobile-link hover:text-bordeaux transition-colors duration-300 block transform hover:scale-105">Kế
+                Hoạch</a>
+            <a href="#contact"
+                class="mobile-link hover:text-bordeaux transition-colors duration-300 block transform hover:scale-105">Liên
+                Hệ</a>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section id="vision"
@@ -187,23 +212,37 @@
                     <span class="text-bordeaux font-serif text-5xl mr-6 font-bold opacity-80">01</span>
                     <h3 class="font-serif text-3xl md:text-4xl">Nâng tầm Ngôn ngữ Hình ảnh</h3>
                 </div>
-                <div class="flex flex-col lg:flex-row items-stretch gap-8 mb-8">
-                    <!-- Left side 40% -->
-                    <div class="w-full lg:w-[30%] flex flex-col">
-                        <span class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4 font-semibold">Hình Ảnh
-                            Thương Hiệu Hiện Tại</span>
-                        <div class="img-container w-full h-[550px] lg:h-[600px] bg-gray-100 flex-grow relative">
+                <div class="flex flex-col md:flex-row w-full mb-8 items-stretch md:justify-between gap-8 md:gap-0">
+                    <!-- Cột 1 -->
+                    <div class="flex flex-col w-full md:w-[calc((100%-24px)/3)]">
+                        <span
+                            class="text-xs uppercase tracking-widest text-gray-400 mb-3 md:mb-4 font-semibold truncate">Hiện
+                            Tại</span>
+                        <div class="img-container w-full bg-gray-100 relative shadow-sm aspect-[9/16]">
                             <img src="https://lh3.googleusercontent.com/d/1X_gnsHmd-e6xdXwsISjuQhJgilbKvWzv#image.jpg"
-                                alt="Hình ảnh hiện tại" class="w-full h-full object-cover hover-img relative z-10">
+                                alt="Hình ảnh hiện tại"
+                                class="absolute inset-0 w-full h-full object-cover hover-img z-10">
                         </div>
                     </div>
-                    <!-- Right side 60% -->
-                    <div class="w-full lg:w-[70%] flex flex-col">
-                        <span class="text-xs uppercase tracking-[0.2em] text-champagne mb-4 font-semibold">Hình Ảnh Cải
+
+                    <!-- Cột 2 & 3 -->
+                    <div class="flex flex-col w-full md:w-[calc(((100%-24px)/3)*2+6px)]">
+                        <span
+                            class="text-xs uppercase tracking-[0.1em] md:tracking-[0.2em] text-champagne mb-3 md:mb-4 font-semibold truncate">Cải
                             Tiến Của Tôi</span>
-                        <div class="img-container w-full h-[500px] lg:h-[700px] bg-bordeaux/10 flex-grow shadow-lg">
-                            <img src="https://lh3.googleusercontent.com/d/1Hr6_P8t0HnIMAhUayQzIQ6qiAbSJwyJc#image.jpg"
-                                alt="Thiết kế cải tiến" class="w-full h-full object-cover hover-img">
+                        <div class="flex flex-col md:flex-row w-full flex-grow md:justify-between gap-8 md:gap-0">
+                            <div
+                                class="img-container bg-bordeaux/5 relative shadow-md aspect-[9/16] w-full md:w-[calc(50%-3px)]">
+                                <img src="https://lh3.googleusercontent.com/d/1fce9hOoeyyp279pPcZ2gBfCiOBjlRmT1#image.jpg"
+                                    alt="Thiết kế cải tiến 1"
+                                    class="absolute inset-0 w-full h-full object-cover hover-img">
+                            </div>
+                            <div
+                                class="img-container bg-bordeaux/10 relative shadow-md aspect-[9/16] w-full md:w-[calc(50%-3px)]">
+                                <img src="https://lh3.googleusercontent.com/d/11eHWNFerqkMydbNRqWuD78DYiU9bEkQF#image.jpg"
+                                    alt="Thiết kế cải tiến 2"
+                                    class="absolute inset-0 w-full h-full object-cover hover-img">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,21 +269,37 @@
                     <span class="text-bordeaux font-serif text-5xl mr-6 font-bold opacity-80">02</span>
                     <h3 class="font-serif text-3xl md:text-4xl">Tối ưu hóa Góc nhìn & Trải nghiệm Thị giác</h3>
                 </div>
-                <div class="flex flex-col lg:flex-row items-stretch gap-8 mb-8">
-                    <div class="w-full lg:w-[30%] flex flex-col">
-                        <span class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4 font-semibold">Hình Ảnh
-                            Thương Hiệu Hiện Tại</span>
-                        <div class="img-container w-full h-[550px] lg:h-[600px] bg-gray-100 flex-grow relative">
+                <div class="flex flex-col md:flex-row w-full mb-8 items-stretch md:justify-between gap-8 md:gap-0">
+                    <!-- Cột 1 -->
+                    <div class="flex flex-col w-full md:w-[calc((100%-24px)/3)]">
+                        <span
+                            class="text-xs uppercase tracking-widest text-gray-400 mb-3 md:mb-4 font-semibold truncate">Hiện
+                            Tại</span>
+                        <div class="img-container w-full bg-gray-100 relative shadow-sm aspect-[9/16]">
                             <img src="https://lh3.googleusercontent.com/d/17kukmwzAvZ0IT1NIz9Mj_I5216DV9SjI#image.jpg"
-                                alt="Trang web hiện tại" class="w-full h-full object-cover hover-img">
+                                alt="Trang web hiện tại"
+                                class="absolute inset-0 w-full h-full object-cover hover-img z-10">
                         </div>
                     </div>
-                    <div class="w-full lg:w-[70%] flex flex-col">
-                        <span class="text-xs uppercase tracking-[0.2em] text-champagne mb-4 font-semibold">Hình Ảnh Cải
+
+                    <!-- Cột 2 & 3 -->
+                    <div class="flex flex-col w-full md:w-[calc(((100%-24px)/3)*2+6px)]">
+                        <span
+                            class="text-xs uppercase tracking-[0.1em] md:tracking-[0.2em] text-champagne mb-3 md:mb-4 font-semibold truncate">Cải
                             Tiến Của Tôi</span>
-                        <div class="img-container w-full h-[500px] lg:h-[700px] bg-offwhite flex-grow shadow-lg">
-                            <img src="https://lh3.googleusercontent.com/d/1jgGFl2QQQl463RuSk-slI61oVRnXN74O#image.jpg"
-                                alt="Trang web cải tiến" class="w-full h-full object-cover hover-img">
+                        <div class="flex flex-col md:flex-row w-full flex-grow md:justify-between gap-8 md:gap-0">
+                            <div
+                                class="img-container bg-bordeaux/5 relative shadow-md aspect-[9/16] w-full md:w-[calc(50%-3px)]">
+                                <img src="https://lh3.googleusercontent.com/d/11O6D04QHAml3MQpPyMdSHQa167wTnK0T#image.jpg"
+                                    alt="Trang web cải tiến 1"
+                                    class="absolute inset-0 w-full h-full object-cover hover-img">
+                            </div>
+                            <div
+                                class="img-container bg-offwhite relative shadow-md aspect-[9/16] w-full md:w-[calc(50%-3px)]">
+                                <img src="https://lh3.googleusercontent.com/d/1PuREEp4I5WPRqmTyXralUDOxuoTEHI9X#image.jpg"
+                                    alt="Trang web cải tiến 2"
+                                    class="absolute inset-0 w-full h-full object-cover hover-img">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -271,21 +326,34 @@
                     <span class="text-bordeaux font-serif text-5xl mr-6 font-bold opacity-80">03</span>
                     <h3 class="font-serif text-3xl md:text-4xl">Tái cấu trúc Hệ thống Nhận diện Đồ họa</h3>
                 </div>
-                <div class="flex flex-col lg:flex-row items-stretch gap-8 mb-8">
-                    <div class="w-full lg:w-[30%] flex flex-col">
-                        <span class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4 font-semibold">Hình Ảnh
-                            Thương Hiệu Hiện Tại</span>
-                        <div class="img-container w-full h-[550px] lg:h-[600px] bg-gray-100 flex-grow relative">
-                            <img src="https://lh3.googleusercontent.com/d/1LmeYQyiFcvs6G6x6wxoTUZQmPWx2Y1kK#image.jpg"
-                                alt="Bao bì hiện tại" class="w-full h-full object-cover hover-img">
+                <div class="flex flex-col md:flex-row w-full mb-8 items-stretch md:justify-between gap-8 md:gap-0">
+                    <!-- Cột 1 -->
+                    <div class="flex flex-col w-full md:w-[calc((100%-24px)/3)]">
+                        <span
+                            class="text-xs uppercase tracking-widest text-gray-400 mb-3 md:mb-4 font-semibold truncate">Hiện
+                            Tại</span>
+                        <div class="img-container w-full bg-gray-100 relative shadow-sm aspect-[9/16]">
+                            <img src="https://lh3.googleusercontent.com/d/1tK-J_P1hURr4Lgddz1h-E34aHWAhb1X3#image.jpg"
+                                alt="Ảnh hiện tại" class="absolute inset-0 w-full h-full object-cover hover-img z-10">
                         </div>
                     </div>
-                    <div class="w-full lg:w-[70%] flex flex-col">
-                        <span class="text-xs uppercase tracking-[0.2em] text-champagne mb-4 font-semibold">Hình Ảnh Cải
+
+                    <!-- Cột 2 & 3 -->
+                    <div class="flex flex-col w-full md:w-[calc(((100%-24px)/3)*2+6px)]">
+                        <span
+                            class="text-xs uppercase tracking-[0.1em] md:tracking-[0.2em] text-champagne mb-3 md:mb-4 font-semibold truncate">Cải
                             Tiến Của Tôi</span>
-                        <div class="img-container w-full h-[500px] lg:h-[700px] bg-bordeaux/5 flex-grow shadow-lg">
-                            <img src="https://lh3.googleusercontent.com/d/1qdSHqO6K4GIA5JEQRDdaf6bJVwNnY3_D#image.jpg"
-                                alt="Bao bì cải tiến" class="w-full h-full object-cover hover-img">
+                        <div class="flex flex-col md:flex-row w-full flex-grow md:justify-between gap-8 md:gap-0">
+                            <div
+                                class="img-container bg-bordeaux/5 relative shadow-md aspect-[9/16] w-full md:w-[calc(50%-3px)]">
+                                <img src="https://lh3.googleusercontent.com/d/1aFk_jIYPd_D7WKvZ2xIChmG09xCRfTkx#image.jpg"
+                                    alt="Ảnh cải tiến 1" class="absolute inset-0 w-full h-full object-cover hover-img">
+                            </div>
+                            <div
+                                class="img-container bg-bordeaux/5 relative shadow-md aspect-[9/16] w-full md:w-[calc(50%-3px)]">
+                                <img src="https://lh3.googleusercontent.com/d/1olg5HOIsTk8HZCWGapLlQVA0CGF3O6nx#image.jpg"
+                                    alt="Ảnh cải tiến 2" class="absolute inset-0 w-full h-full object-cover hover-img">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -683,6 +751,36 @@
                 closeLightbox();
             }
         });
+
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling under menu
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+
+        if (mobileMenuBtn && closeMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+            closeMenuBtn.addEventListener('click', closeMobileMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        }
     </script>
 </body>
 
